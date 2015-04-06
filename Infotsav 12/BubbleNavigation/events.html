@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Events</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial;
+                background:#fff url(event_back.jpg) no-repeat;
+            }
+            #content{
+                margin:0 auto;
+            }
+
+
+        </style>
+    </head>
+
+    <body background="event_back.jpg">
+        <div id="content">
+            <a class="back" href="http://tympanus.net/codrops/2010/04/29/awesome-bubble-navigation-with-jquery"></a>
+            <div class="title"></div>
+
+            <div class="navigation" id="nav">
+                <div class="item technical">
+                    <img src="images/gear.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Technical</h2>
+                    <ul>
+                        <li><a href="#">Aakraman</a></li>
+                        <li><a href="#">Reverse Engineering</a></li>
+                        <li><a href="#">La-Ingenious</a></li>
+						<li><a href="#">Code Weavers</a></li>
+						<li><a href="#">Web Mania</a></li>
+						<li><a href="#">Witch Hunt</a></li>
+                    </ul>
+                </div>
+                <div class="item mag">
+                    <img src="images/gear.png" alt="" width="250" height="250" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Managerial</h2>
+                    <ul>
+                        <li><a href="#">Analyst</a></li>
+                        <li><a href="#">Brouhaha</a></li>
+                        <li><a href="#">Pinnacle</a></li>
+						<li><a href="#">Tycoon</a></li>
+                    </ul>
+                </div>
+
+                <div class="item game">
+                    <img src="images/gear.png" alt="" width="250" height="250" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Gamiacs</h2>
+                    <ul>
+                        <li><a href="#">CS 1.6</a></li>
+                        <li><a href="#">NFS</a></li>
+                        <li><a href="#">FIFA</a></li>
+                    </ul>
+                </div>
+				<div class="item on">
+                    <img src="images/gear.png" alt="" width="250" height="250" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Online Events</h2>
+                    <ul>
+                        <li><a href="#">CS 1.6</a></li>
+                        <li><a href="#">NFS</a></li>
+                        <li><a href="#">FIFA</a></li>
+                    </ul>
+                </div>
+                <div class="item fav">
+                    <img src="images/gear.png" alt="" width="250" height="250" class="circle"/>
+                    <a href="#" class="icon"></a>
+                    <h2>Robo Fieasta</h2>
+                    <ul>
+                        <li><a href="#">Social</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Comments</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'380px',
+                        'height'    :'380px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'100px',
+                        'height'    :'100px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+    </body>
+</html>

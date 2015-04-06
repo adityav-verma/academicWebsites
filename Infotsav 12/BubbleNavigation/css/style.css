@@ -1,0 +1,112 @@
+.navigation{
+    margin: 0px auto;
+    font-family: "AlphaMaleModern", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+.navigation .item{
+    position:absolute;
+}
+.technical{
+    top:100px;
+    left:200px;
+}
+.mag{
+   top:100px;
+   left:550px;
+}
+.on{
+   top:290px;
+   left:900px;
+}
+.game{
+   top:100px;
+   left:900px;
+}
+.fav{
+   top:290px;
+   left:500px;
+}
+a.icon{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+.technical a.icon{
+    background:transparent url(../images/user.png) no-repeat 0px 0px;
+}
+.mag a.icon{
+    background:transparent url(../images/user.png) no-repeat 0px 0px;
+}
+.on a.icon{
+    background:transparent url(../images/user.png) no-repeat 0px 0px;
+}
+.game a.icon{
+    background:transparent url(../images/user.png) no-repeat 0px 0px;
+}
+.fav a.icon{
+    background:transparent url(../images/user.png) no-repeat 0px 0px;
+}
+.navigation .item a.active{
+    background-position:0px -100px;
+}
+.item img.circle{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100px;
+    height:100px;
+    opacity:0.1;
+}
+.item h2{
+    position:absolute;
+    width:300px;
+    height:52px;
+    color:#330000;
+    font-size:30px;
+    top:20px;
+    left:100px;
+    text-indent:10px;
+    line-height:50px;
+    text-shadow:1px 1px 1px #fff;
+    text-transform:uppercase;
+}
+.item h2.active{
+    color:f26522;
+    text-shadow:5px 0px 5px #555;
+}
+.item ul{
+    list-style:none;
+    position:absolute;
+    top:80px;
+    left:100px;
+    display:none;
+}
+.item ul li a{
+    font-size:20px;
+    text-decoration:none;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color: #330000;
+    padding:3px;
+    float:right;
+    clear:both;
+    width:200px;
+    text-shadow:1px 1px 1px #fff;
+}
+.item ul li a:hover{
+    background-color:#fff;
+    color:#444;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:1px 1px 4px #666;
+    -webkit-box-shadow:1px 1px 4px #666;
+    box-shadow:1px 1px 4px #666;
+}
+

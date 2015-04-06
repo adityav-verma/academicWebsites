@@ -1,0 +1,125 @@
+@charset "utf-8";
+/*admin page css*/
+.left{		/*defines the divison of event add form*/
+	float: left;
+	width: 480px;
+	background-color: #333;
+	border-radius: 10px;
+	border: 3px solid #39C;
+	margin: 0.1em;
+	margin-bottom:1em;
+}
+
+.right{		/*defines the divison of addResult form*/
+	float: right;
+	width: 480px;
+	background-color: #333;
+	border-radius: 10px;
+	border: 3px solid #39C;
+	margin: 0.1em;
+	margin-bottom:1em;
+}
+
+.full{
+	float: left;
+	width: 960px;
+	background-color: #333;
+	border-radius: 10px;
+	border: 3px solid #39C;
+	margin-left: 1em;
+	margin-bottom:1em;	
+}
+/*form style*/
+form {
+	margin-bottom: 1em;
+}
+
+fieldset{
+	border: none;
+	margin-bottom: 1em;
+}
+
+legend{
+	color:#FFF;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.3em;
+}
+
+form ul{				/*list within a form*/
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+form li{
+	margin: 0;		/*li tag within form element*/
+	margin-bottom: 1em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#FFF;
+	padding: 0;
+	font-size: 1.0em;
+}
+
+label.text{		/*to display the lable on top of text field*/
+	display:block;
+}
+
+/*applies to all input fields that have specified input type*/
+input[type="text"], input[type="search"], input[type="password"], input[type="email"], input[type="date"], input[type="time"], textarea, select{
+	border: none;
+	padding: 0;
+	padding-left:5px;
+	width: 318px;
+	font-size: 1em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	height: 27px;
+	background-color:#FFF;
+	border-radius:5px;
+}
+
+/*rules specific for text area and select tag*/
+textarea{
+	height: 100px;
+}
+select{
+	width: 328px;
+}
+
+/*on focus following property applied*/
+input:focus, textarea:focus{
+	border:4px solid #39C;
+}
+
+/*style of the buttons*/
+input[type="submit"], input[type="reset"], input[type="button"]{
+	border: none;
+	background-color:#39C;
+	width:100px;
+	color:#FFF;
+	padding:.4em;
+	margin:.4em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1em;
+	cursor: pointer;
+	border-radius:5px;
+	border: 2px outset #39C;
+	//box-shadow:0px 3px 8px #000;
+}
+/*specific to input which has logoutB class applied*/
+input.logoutB{
+	padding:.1em;
+	font-size:1.4em;
+}
+/*on hover*/
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover{
+	border-style:inset;
+}
+
+/*applies to those elements in wich parent tag has class condense*/
+.condense input[type="text"], .condense input[type="search"], .condense input[type="email"], .condense input[type="date"], .condense input[type="time"], .condense input[type="password"], .condense textarea, .condense select{
+	width:240px;
+}
+
+.condense input[type="submit"], .condense input[type="reset"], .condense input[type="button"]{
+	padding:0.2em;
+}

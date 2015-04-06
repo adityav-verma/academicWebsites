@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Reverse Engineering</title>
+<link rel="shortcut icon" type="image/x-icon" href="a.ico">
+<style type="text/css">body, a:hover {cursor: url(cur1002.cur), progress !important;}</style>
+<style type="text/css">
+<!--
+A.ssmItems:link		{color:black;text-decoration:none;}
+A.ssmItems:hover	{color:black;text-decoration:none;}
+A.ssmItems:active	{color:black;text-decoration:none;}
+A.ssmItems:visited	{color:black;text-decoration:none;}
+//-->
+p
+{
+background-color:yellow;
+}
+p.margin
+{
+margin-right:100px;
+margin-left:70px;
+}
+</style>
+</head>
+
+<body background="f.jpg" marginheight="0" topmargin="0" vspace="0" onLoad="StartSlideShow()"
+marginwidth="0" leftmargin="0" hspace="0" style="margin:0; padding:0" >
+<a href="home.html"><img src="bottom.jpg" border="0"></a>
+<br><br><br>
+<?php
+include("dbcon.php");
+mysql_select_db('web');
+
+$query="SELECT * FROM reverse_engineering";
+$result=mysql_query($query);
+while($row=mysql_fetch_array($result)){
+	$des=$row[0];
+	$rules=$row[1];
+	$time=$row[2];
+	}
+	echo "<table align='center'>";
+	echo "<tr><td width='1300'>";
+	echo "<p class='margin'><font face='Algerian' size='5' COLOR='f26522'>Description:</font></p>";
+	echo "</tr></td>";
+	echo "<tr><td>";
+	echo"<font face='Algerian' SIZE='+1.5' color='gray'>".$des;
+	echo "</td></tr>";
+	echo "<tr><td>";
+	echo "<p class='margin'><font face='Algerian' size='5' COLOR='f26522'>Rules:</font></p>";
+	echo "</td></tr>";
+	echo "<tr><td>";
+	echo"<font face='Algerian' SIZE='+1.5' color='gray'>".$rules;
+	echo "</td></tr>";
+	echo "<tr><td>";
+	echo "<p class='margin'><font face='Algerian' size='5' COLOR='f26522'>Timeline:</font></p>";
+	echo "</td></tr>";
+	echo "<tr><td>";
+	echo "<font face='Algerian' SIZE='+1.5' color='gray'>".$time;
+	echo "</td></tr>";
+	echo "</table>"
+?>
+</html>
