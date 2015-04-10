@@ -3,8 +3,8 @@
 	$user = $_POST['user'];
 	$pass = $_POST['pass'];
 	
-	if($user == "aasf" && $pass == "percy_jackson"){
-		$_SESSION['admin'] = "percy_jackson";
+	if($user == "admin" && $pass == "admin"){
+		$_SESSION['admin'] = "admin";
 		header('location:admin.php');
 	}
 	else{
